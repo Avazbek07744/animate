@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #161212;
+    margin: 0;
+}
+
+.line {
+    position: relative;
+    width: 4px;
+    height: 200px;
+    background-color: white;
+    transform: rotate(70deg);
+}
+
+.div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    top: 100%;
+    left: -400%;
+    transform: translate(-50%, -80%);
+    animation: animation 4s infinite ease-in;
+}
+
+@keyframes animation {
+    0% {
+        top: 100%;
+        transform: translate(-50%, -100%) rotate(-350deg);
+    }
+
+    50% {
+        top: 0;
+        transform: translate(-50%, -100%) rotate(50deg);
+    }
+
+    100% {
+        top: 100%;
+        transform: translate(-50%, -100%) rotate(-360deg);
+    }
+}
